@@ -35,20 +35,7 @@ public class Programa {
 		Integer numPistaTenis=0;
 		Integer numPistaSquash=0;
 		
-		while(f.configuracionleer.hasNext()) {
-			f.configuracionleer.next();
-			sobrecoste= f.configuracionleer.nextInt();
-			f.configuracionleer.next();
-			sobrecoste= f.configuracionleer.nextInt();
-			f.configuracionleer.next();
-			sobrecoste= f.configuracionleer.nextInt();
-			f.configuracionleer.next();
-			sobrecoste= f.configuracionleer.nextInt();
-			f.configuracionleer.next();
-			sobrecoste= f.configuracionleer.nextInt();
-			f.configuracionleer.next();
-			sobrecoste= f.configuracionleer.nextInt();
-		}
+		f.leerConfiguracion();
 		System.out.println("sobrecoste:::" + sobrecoste);
 		f.closeUp();
 	}

@@ -68,6 +68,13 @@ public class Fichero {
 		public void escribirConfiguracion(Configuracion c) {
 			configuracionescribir.print(c.toString());
 		}
+		public void leerConfiguracion() {
+			while(configuracionleer.hasNext()) {
+				System.out.print(configuracionleer.next()+" ");
+				System.out.println(configuracionleer.next());
+				
+			}
+		}
 		public void closeUp() {
 			try {
 				socioleer.close();
