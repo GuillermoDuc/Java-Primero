@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class Fichero {
+	ObjectInputStream lector= null;
+	ObjectOutputStream escritor= null;
+	Fichero(String fichero) throws IOException{
+			escritor = new ObjectOutputStream(new FileOutputStream(fichero));
+			lector = new ObjectInputStream(new FileInputStream(fichero));
+	}
+			
+	public void escribirFinal(Agencia a) throws IOException {
+		ArrayList<Viajante> array= a.viajantes;
+		escritor.writeObject(array);
+		}
+	
+	@SuppressWarnings("unchecked")
+	public ArrayList<Viajante> leerPrincipio() throws ClassNotFoundException, IOException{
+		ArrayList<Viajante> listaViajantes;
+		listaViajantes= (ArrayList<Viajante>) lector.readObject();
+		return listaViajantes;
+	}
+	public void escribirViajante(Viajante v) throws IOException {
+		escritor.writeObject(v);
+	}
+	public void closeUp() throws IOException {
+		escritor.close();
+		lector.close();
+	}
+	
+}

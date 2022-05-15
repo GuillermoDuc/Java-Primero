@@ -1,0 +1,39 @@
+import javax.imageio.plugins.tiff.FaxTIFFTagSet;
+
+/*
+ * Debemos crear un programa para la gestión de un club deportivo tratando, por un lado, los socios y, por el
+otro, la reserva de pistas.
+La gestión de socios incluye las altas, bajas, modificación de datos y pago de recibos. De los mismos, tenemos
+registrados nombre, apellidos, fecha de alta, número de socio y tipo (infantil, juvenil o adulto). Cada uno de
+ellos paga una cuota diferente que está almacenada en el fichero de configuración del programa.
+El club cuenta con pistas de tenis, pádel y squash. Como en el caso de las cuotas, el fichero de configuración
+del programa indica la cantidad que hay de cada tipo y su precio de uso. Cualquier socio puede reservar una
+pista indicando cuál va a usar, la hora (un número como 10, 11, 15...) y qué otros socios van a utilizarla;
+también puede jugar con un invitado, que tiene un sobrecargo (especificado en el fichero de configuración).
+El cobro, en cualquier caso, se realiza siempre al socio que hace la reserva.
+El programa mantiene la información en dos ficheros, uno de socios y otro de reservas, teniendo una opción
+para leerlos y otra para actualizarlos en cualquier momento: no los lee al principio ni los guarda o pide
+confirmación para hacerlo al abandonar el programa.
+El programa, además, debe permitir modificar las cuotas, precio y número de pistas, almacenando (de
+inmediato) la información en el fichero de configuración, que debe ser de texto, si algún dato es actualizado.
+Éste sí debe ser leído al inicio, finalizando el programa si el fichero no existe o contiene errores (un formato
+no apropiado).
+ */
+public class Programa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Configuracion c= new Configuracion();
+		Fichero f= new Fichero("socios.txt", "reservas.txt", "configuracion.txt");
+		f.escribirConfiguracion(c);
+		System.out.println(c.toString());
+		Integer sobrecoste=0;
+		while(f.configuracionleer.hasNext()) {
+			f.configuracionleer.next();
+			sobrecoste= f.configuracionleer.nextInt();
+		}
+		System.out.println("sobrecoste:::" + sobrecoste);
+		f.closeUp();
+	}
+
+}

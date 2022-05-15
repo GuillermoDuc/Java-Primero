@@ -1,0 +1,25 @@
+import java.io.*;
+
+public class Fichero {
+	ObjectInputStream lector= null;
+	ObjectOutputStream escritor= null;
+	Fichero(String fichero) throws IOException{
+		try {
+			escritor = new ObjectOutputStream(new FileOutputStream(fichero));
+				} 
+			finally {
+			if (escritor != null) {
+			escritor.close();
+					}
+				}
+		try {
+			lector = new ObjectInputStream(new FileInputStream(fichero));
+			} 
+			finally {
+			if (lector != null) {
+			lector.close();
+			}
+	}
+}
+	
+}

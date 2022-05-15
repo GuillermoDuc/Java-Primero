@@ -1,0 +1,45 @@
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
+import java.util.Scanner;
+
+public class Fichero {
+	ObjectInputStream socioleer = null;
+	ObjectInputStream reservaleer = null;
+	ObjectOutputStream reservaescribir = null;
+	ObjectOutputStream socioescribir = null;
+	OutputStream configuracionescribir = null;
+	Scanner configuracionleer = null;
+		Fichero(String socios, String reservas, String configuracion){
+			try {
+				socioleer= new ObjectInputStream(new FileInputStream(socios));
+				socioescribir= new ObjectOutputStream(new FileOutputStream(socios));
+				reservaescribir= new ObjectOutputStream(new FileOutputStream(reservas));
+				reservaleer= new ObjectInputStream(new FileInputStream(reservas));
+				configuracionescribir= new PrintStream(new FileOutputStream(configuracion));
+				configuracionleer= new Scanner(new FileInputStream(configuracion));
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
+		}
+		public void escribirConfiguracion(Configuracion c) {
+			
+		}
+		public void closeUp() {
+			try {
+				socioleer.close();
+				socioescribir.close();
+				reservaleer.close();
+				reservaescribir.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+}

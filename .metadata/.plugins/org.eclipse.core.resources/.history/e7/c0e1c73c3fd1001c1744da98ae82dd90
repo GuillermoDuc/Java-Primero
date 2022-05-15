@@ -1,0 +1,12 @@
+import java.io.IOException;
+
+public class Programa {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		Fichero f= new Fichero("aver.txt");
+		Viajante v= new Viajante("hola", 12);
+		f.escribirViajante(v);
+	}
+
+}

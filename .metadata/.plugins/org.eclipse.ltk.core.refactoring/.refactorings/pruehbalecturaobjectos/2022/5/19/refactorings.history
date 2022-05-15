@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;pruehbalecturaobjectos.fichero&apos; to &apos;Fichero&apos;&#x0D;&#x0A;- Original project: &apos;pruehbalecturaobjectos&apos;&#x0D;&#x0A;- Original element: &apos;pruehbalecturaobjectos.fichero&apos;&#x0D;&#x0A;- Renamed element: &apos;pruehbalecturaobjectos.Fichero&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;fichero&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;pruehbalecturaobjectos{fichero.java[fichero" matchStrategy="1" name="Fichero" qualified="false" references="true" similarDeclarations="false" stamp="1652372675804" textual="false" version="1.0"/>
+</session>

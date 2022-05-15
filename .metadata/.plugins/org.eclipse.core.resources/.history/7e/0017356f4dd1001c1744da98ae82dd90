@@ -1,0 +1,7 @@
+
+public class Venta {
+	String fecha;
+	int importe;
+	Viajante cliente;
+	boolean cobrada;
+}

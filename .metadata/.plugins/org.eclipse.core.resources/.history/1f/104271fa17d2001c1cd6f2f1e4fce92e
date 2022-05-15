@@ -1,0 +1,14 @@
+package pruehbalecturaobjectos;
+
+import java.util.ArrayList;
+
+public class Agencia {
+ArrayList<Persona> a = new ArrayList<Persona>();
+	public void annadirPersona(Persona p) {
+		a.add(p);
+	}
+	public void eliminarPersona(int indice) {
+		a.remove(indice);
+	}
+	
+}

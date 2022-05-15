@@ -1,0 +1,19 @@
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class Programa {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		Agencia agencia= new Agencia();
+		ArrayList<Venta> ventas= new ArrayList<Venta>();
+		Fichero f= new Fichero("aver.txt");
+		Viajante v= new Viajante("hola", "aaaaa", 12, 0,ventas );
+		Viajante b= new Viajante("holaaaaa", "bbbbbb", 223, 1,ventas );
+		agencia.annadirViajante(v);
+		agencia.annadirViajante(b);
+		agencia.mostrarListado();
+		f.escribirFinal(agencia);
+	}
+
+}

@@ -1,0 +1,19 @@
+import java.io.IOException;
+
+public class Socio {
+	String nombre;
+	String apellidos;
+	String fechaAlta;
+	int numeroSocio;
+	String tipo; //infantil juvenil o adulto
+	public Socio(String nombre, String apellidos, String fechaAlta, int numeroSocio, String tipo) throws IOException {
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.fechaAlta = fechaAlta;
+		this.numeroSocio = numeroSocio;
+		if(tipo.equals("juvenil")|tipo.equals("adulto")|tipo.equals("infatil"))
+			this.tipo = tipo;
+		else throw new IOException ("tipo no valido");
+	}
+	 
+}

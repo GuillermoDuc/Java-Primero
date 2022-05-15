@@ -1,0 +1,52 @@
+package pruehbalecturaobjectos;
+import java.io.*;
+public class Fichero {
+	ObjectInputStream lector= null;
+	ObjectOutputStream escritor= null;
+	Fichero(String fichero) {
+			try {
+				escritor = new ObjectOutputStream(new FileOutputStream(fichero));
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				lector = new ObjectInputStream(new FileInputStream(fichero));
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	public void escribirObjeto(Persona p) {
+		try {
+			escritor.writeObject(p);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	public void leerObjetos() throws ClassNotFoundException, IOException {
+	
+
+			
+			Persona p=(Persona) lector.readObject();
+			p.toString();
+		
+	
+		}
+	
+	
+	public void closeUp() {
+		try {
+			lector.close();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			escritor.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

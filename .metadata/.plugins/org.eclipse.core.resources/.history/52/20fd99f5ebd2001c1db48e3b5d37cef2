@@ -1,0 +1,8 @@
+import java.util.ArrayList;
+
+public class Club {
+ArrayList<Socio> socios=new ArrayList<Socio>();
+ArrayList<Reserva> reservas=new ArrayList<Reserva>();
+
+
+}

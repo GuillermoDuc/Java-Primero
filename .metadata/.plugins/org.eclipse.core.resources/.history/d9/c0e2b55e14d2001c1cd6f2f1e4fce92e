@@ -1,0 +1,22 @@
+package pruehbalecturaobjectos;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Fichero f= new Fichero("ejemplo.txt");
+		Persona a= new Persona("Ana","Booleana",19);
+		Persona b= new Persona("Ana","No Booleana",2344);
+		Persona c= new Persona("Anacccc","No Booleana",2344);
+		Persona d= new Persona("Anadddd","No Booleana",2344);
+		
+		
+		f.escribirObjeto(a);
+		f.escribirObjeto(b);
+		f.escribirObjeto(c);
+		f.escribirObjeto(d);
+		f.leerObjetos();
+		f.closeUp();
+	}
+
+}

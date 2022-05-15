@@ -1,0 +1,46 @@
+/*Escribir un programa que lea una frase (máximo 60 caracteres) y diga cuántas letras distintas
+tiene y la frecuencia de las mismas, para homogeneizar el conjunto de letras debemos trabajar
+solo con mayúsculas. Indica cuáles son los ficheros de entrada y salida del compilador.*/
+
+package package1;
+import java.util.Scanner;
+public class Ej11tema4 {
+
+	public static void main(String[]args) {
+	Scanner teclado= new Scanner(System.in);
+	String frase="";
+	char letra='A';
+	char letracomprobar;
+	System.out.println("introduzca su frase de menos de 60 caracteres");
+	frase= teclado.nextLine();
+	int i=0;
+	int numeroletras=0;
+	int caracteres= frase.length();
+	frase=frase.toUpperCase();
+	boolean condicion;
+	while (letra<='Z') {
+		condicion=true;
+		while (i<caracteres&&condicion==true) 
+		{	letracomprobar=frase.charAt(i);
+			if (letra==letracomprobar) {
+				numeroletras++;
+				condicion=false;
+			}
+			else {i++;}
+	
+		}
+		letra++;
+		
+	}
+	System.out.println(numeroletras);
+		
+	}
+	
+	
+	
+	
+	
+	
+	}
+
+

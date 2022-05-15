@@ -1,0 +1,11 @@
+import java.io.Serializable;
+
+public class Viajante implements Serializable {
+	String nombre;
+	int aniosantiguo;
+	public Viajante(String nombre, int aniosantiguo) {
+		this.nombre = nombre;
+		this.aniosantiguo = aniosantiguo;
+	}
+
+}

@@ -1,0 +1,8 @@
+sobrecoste= 0
+cuotaInfaintil= 10
+cuotaJuvenil= 12
+cuotaAdulto= 15
+numPistaPadel= 2
+numPistaTenis= 3
+numPistaSquash= 1
+precio= 10

@@ -1,0 +1,62 @@
+/*Simular una maquina tragaperras donde los símbolos que aparecen son:
+	$ # % < > @
+	generando al azar secuencias de 3 símbolos y al final se para. Nota: usad un String
+	de 3 letras y generarlo al azar con random.
+	El programa detecta si la combinación que se ha parado está premiada; indica con
+	un mensaje adecuado si está premiada o no.
+	Las combinaciones ganadoras son:
+
+	Combinación Premio
+	(euros)
+	$$$ 50
+	$@@ 25
+	$## 15
+	@@@ 10
+	@## 5
+	@$$ 3
+	### 1
+	%%% 1
+	<<< 1
+	>>> 1
+	$@% 1
+
+	El programa debe llevar la contabilidad del jugador, es decir, si gana o pierde y
+	mostrarla en todo momento en alguna zona de pantalla. El juego debe acabar
+	cuando no quede saldo positivo o bien el jugador quiera abandonar mediante su
+	indicación por el teclado.
+	Para favorecer al jugador debéis hacer que los caracteres $ y @ tengan un 30% de
+	probabilidad y el resto un 10% cada uno. Nota: para ello, generad un número de 1 a
+	10 y, en función de ese valor, generáis:
+	el carácter $ si sale 1, 2 ó 3*/
+
+package package1;
+import java.util.Scanner;
+public class Ejev5b {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner teclado= new Scanner(System.in);
+		String probabilidad="&&&@@@#%<>";
+		int dinero=100;
+		int aleatorio=(int)(Math.random()*10+1);
+		int respuesta;
+		System.out.println(aleatorio);
+		/*String combinacion="";
+		System.out.println("Su dinero actual es "+dinero);
+		System.out.println("Para continuar jugando escriba 1, para parar escriba 0");
+		respuesta=teclado.nextInt();
+		System.out.println(aleatorio);
+		while(respuesta==1&&dinero>=0) {
+			char combinacion1=probabilidad.charAt(aleatorio);}*/
+			
+			
+			
+			
+			
+			
+			
+		}
+		
+	}
+
+
